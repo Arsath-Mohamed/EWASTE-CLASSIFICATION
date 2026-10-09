@@ -4,7 +4,7 @@ from PIL import Image
 import os
 import cv2
 import tempfile
-model = YOLO(r"X:\best.pt")
+model = YOLO(r"best.pt")
 st.set_page_config(page_title="E-Waste Detection", layout="wide")
 st.title("♻️ E-Waste Component Detection")
 st.markdown("Upload an image or use your webcam to detect e-waste components.")
