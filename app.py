@@ -13,9 +13,9 @@ confidence = st.sidebar.slider("Confidence Threshold", 0.0, 1.0, 0.25)
 use_webcam = st.sidebar.checkbox("Use Webcam", value=False)
 
 def display_results(image_path, results):
-    st.image(Image.open(image_path), caption="Uploaded Image", use_column_width=True)
+    st.image(Image.open(image_path), caption="Uploaded Image", use_container_width=True)
     for r in results:
-        st.image(r.plot(), caption="Predictions", use_column_width=True)
+        st.image(r.plot(), caption="Predictions", channels="BGR", use_container_width=True)
 if use_webcam:
     stframe = st.empty()
     cap = cv2.VideoCapture(0)
